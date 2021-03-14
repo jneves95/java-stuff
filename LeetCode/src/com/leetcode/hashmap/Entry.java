@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.hashmap;
 
 public class Entry {
     private int key;
