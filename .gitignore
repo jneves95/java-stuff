@@ -2,4 +2,5 @@ LeetCode/out/
 DesignPatterns/out/
 */.idea/
 *.log
+*.bin
 
