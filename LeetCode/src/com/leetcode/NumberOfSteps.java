@@ -1,4 +1,6 @@
-/*
+package com.leetcode;
+
+/**
  * Given a non-negative integer, returns how many steps it takes to be reduced to 0 
  * by dividing by 2 when it is even, and subtracting 1 when it is odd.
  * 

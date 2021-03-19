@@ -1,10 +1,6 @@
 package com.leetcode.strings;
 
-import java.util.Map;
-import java.util.Set;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 /*
  * LeetCode 06 March 2021 Challenge

@@ -1,4 +1,6 @@
-/*
+package com.leetcode.strings;
+
+/**
  * Given a string composed of only lower-case english characters s and a character c, 
  * returns an array of the same length ans where ans[i] equals the distance to c.
  * 

@@ -1,8 +1,10 @@
-/*
+package com.leetcode;
+
+/**
  * 1 1 4 5 6
  * 1 1 4 6 5
  * 1 1 5 4 6
- * 1 1 5 6 4 <- como decidir que o
+ * 1 1 5 6 4
  * 1 1 6 4 5
  * 1 1 6 5 4
  * 1 4 1 5 6
@@ -24,7 +26,7 @@ public class NextPermutation {
 					nums[i] = nums[j];
 					nums[j] = temp;
 					
-					// inverte o restantes até ao fim do array
+					// inverte o restantes atï¿½ ao fim do array
 					reverse(nums, i+1, nums.length-1);
 					
 					return;

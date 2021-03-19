@@ -1,4 +1,4 @@
-/*
+package com.leetcode.strings;/*
  * For a given length "n" and a given number "k", returns the lexicographically 
  * smallest lower-case string with length "n" where to each letter corresponds a number 
  * according to its position in the alphabet ('a' = 1, 'b' = 2, ..., 'z' = 26) and 
@@ -8,6 +8,14 @@
  *
  */
 
+/**
+ * Given a length N and an integer K, returns an encoding of said integer with length N and where the sum of the character values is K.
+ *
+ * Examples:
+ * n = 1, k = 22 -> ans = "v"
+ * n = 5, k = 22 -> ans = "aaaar"
+ * n = 5, k = 73 -> ans = "aaszz"
+ */
 public class SmallestString {
 	public String getSmallestString(int n, int k) {
 		if (n > k || k > n * 26) return "";
