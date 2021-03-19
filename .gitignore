@@ -3,4 +3,4 @@ DesignPatterns/out/
 */.idea/
 *.log
 *.bin
-
+*.class
