@@ -1,7 +1,5 @@
 package com.leetcode.stacks;
 
-import com.leetcode.stacks.FreqStack;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
