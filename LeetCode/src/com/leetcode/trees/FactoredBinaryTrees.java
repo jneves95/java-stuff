@@ -1,6 +1,8 @@
-package com.leetcode;
+package com.leetcode.trees;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /*
 LeetCode 13 March 2021 Challenge

@@ -1,7 +1,5 @@
 package com.leetcode.lists;
 
-import java.util.List;
-
 /**
  * LeetCode 14 March 2021 Challenge
  *

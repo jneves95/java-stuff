@@ -1,6 +1,8 @@
 package com.leetcode;
 
-
+/**
+ * Given an integer, calculate it's hamming weight (different than zero)
+ */
 public class HammingWeight {
 	public int hammingWeight(int n) {
 		char[] bin = Integer.toBinaryString(n).toCharArray();
@@ -31,7 +33,7 @@ public class HammingWeight {
 		
 		while (n != 0) {
 			bits += (n & 1);
-			n >>>= 1;
+			n >>>= 1;	// Unsigned bit shift (hence the extra >)
 		}
 		
 		return bits;

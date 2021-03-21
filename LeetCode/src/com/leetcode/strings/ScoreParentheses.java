@@ -2,8 +2,9 @@ package com.leetcode.strings;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
-/*
+/**
  * LeetCode February 24 2021 Challenge
  * 
  * Given a balanced parentheses string, computes the score of the string based on the following conditions:
@@ -38,22 +39,9 @@ public class ScoreParentheses {
 		}
 	}
 
-	public int scoreParentheses(String s) {
-		if (s.isBlank()) return 1;
-		if (s.length() > 1) {
-			if (s.charAt(0) == '(' && s.charAt(1) == '(') {
-				return 2 * scoreParentheses(s.substring(1));
-			}
-			else if (s.charAt(0) == ')' && s.charAt(1) == '(') {
-				return 1 + scoreParentheses(s.substring(1));
-			}
-			else {
-				return scoreParentheses(s.substring(1));
-			}
-		}
-		else return 1;
-	}
-	
+	/**
+	 * Using tree.
+	 */
 	public int scoreParenthesesTree(String s) {
 		TreeNode root = new TreeNode();
 		TreeNode current = root;
@@ -75,12 +63,68 @@ public class ScoreParentheses {
 		// Traverse tree recursively to compute the score
 		return root.computeScore();
 	}
+
+	/**
+	 * Using stack.
+	 */
+	public int scoreParentheses(String s) {
+		int ans = 0;
+		Stack<Integer> st = new Stack<>();
+
+		for (int i = 0; i < s.length(); i++) {
+			if (s.charAt(i) == '(') {
+				st.push(-1);
+			}
+			else { // ')'
+				if (st.peek() == -1) {	// if it closes off an open parentheses, just exchange with 1 - terminal
+					st.pop();
+					st.push(1);
+				}
+				else {
+					int x = 0;
+					while (!st.isEmpty() && st.peek() != -1) { 	// Add up everything following condition 2 until we find the open parentheses
+						x += st.pop();
+					}
+					st.pop();	// remove the open parentheses
+					st.push(x * 2);	// multiply by 2 according to condition 3
+				}
+			}
+		}
+
+		// Add up computed substring scores
+		while (!st.isEmpty()) {
+			ans += st.pop();
+		}
+
+		return ans;
+	}
+
+	/**
+	 * TODO: Using recursion. (right now it is wrong)
+	 */
+	public int scoreParenthesesR(String s) {
+		if (s.isBlank()) return 1;
+		if (s.length() > 1) {
+			if (s.charAt(0) == '(' && s.charAt(1) == '(') {
+				return 2 * scoreParenthesesR(s.substring(1));
+			}
+			else if (s.charAt(0) == ')' && s.charAt(1) == '(') {
+				return 1 + scoreParenthesesR(s.substring(1));
+			}
+			else {
+				return scoreParenthesesR(s.substring(1));
+			}
+		}
+		else return 1;
+	}
 	
 	public static void main(String[] args) {
 		ScoreParentheses sp = new ScoreParentheses();
 		String s = "(()(()))(()())";
-		
+
 		System.out.println(sp.scoreParenthesesTree(s));
+		System.out.println(sp.scoreParentheses(s));
+		System.out.println(sp.scoreParenthesesR(s));
 	}
 
 }

@@ -1,7 +1,9 @@
+package com.leetcode.trees;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/*
+/**
  * Given a binary tree, return the right-most values 
  * ordered from top to bottom, as if we were standing on the right side of the tree.
  * 

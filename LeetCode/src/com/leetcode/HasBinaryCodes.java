@@ -1,12 +1,13 @@
 package com.leetcode;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
-/*
+/**
 LeetCode 12 March 2021 challenge
  */
 public class HasBinaryCodes {
-    /*
+    /**
     Generates a string for every possible code and checks, for each one (brute force), the whole binary string S for a match
      */
     public boolean hasAllCodesBrute(String s, int k) {
@@ -40,7 +41,7 @@ public class HasBinaryCodes {
         return true;
     }
 
-    /*
+    /**
     Initializes a set of binary strings for each possible code, and for every substring of length K in S, removes it from the set, if it exists.
     Finally it checks if the set is empty, meaning every possible code was found in S.
      */
@@ -68,7 +69,7 @@ public class HasBinaryCodes {
         return codes.isEmpty();
     }
 
-    /*
+    /**
     For every substring of length K in S, inserts the corresponding integer into a hash set.
     Finally, checks if the set contains all possible binary codes. (2 ^ k)
      */
@@ -83,7 +84,7 @@ public class HasBinaryCodes {
         return subs.size() == max;
     }
 
-    /*
+    /**
     Using an auxiliary boolean table of size 2^k, with a position for every binary code possible, we count down the substrings of length K in S that match a binary code not yet found
     and check it as true on our table.
     Finally, we check that we found all possible binary codes.
