@@ -15,18 +15,19 @@ package com.leetcode;
  * 1 4 6 5 1
  * 1 5 1 4 6
  * 
+ 6 5 4 2 1
  */
 public class NextPermutation {
 	public void nextPermutation(int[] nums) {
 		for (int i = nums.length - 2; i >= 0; i--) {
 			for (int j = nums.length - 1; j > i; j--) {
 				if (nums[i] < nums[j]) {
-					// troca
+					// Swap them
 					int temp = nums[i];
 					nums[i] = nums[j];
 					nums[j] = temp;
 					
-					// inverte o restantes at� ao fim do array
+					// Reverse digits to the right
 					reverse(nums, i+1, nums.length-1);
 					
 					return;
