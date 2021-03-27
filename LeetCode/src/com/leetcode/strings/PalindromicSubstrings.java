@@ -56,6 +56,33 @@ public class PalindromicSubstrings {
         return count;
     }
 
+    // Another even simpler approach is to start with the smallest substrings possible that are palindromes (single character and double character)
+    // and keep extending them while it stays palindromic.
+    static int countPalindromesExtend(String s) {
+        int n = s.length();
+        int count = n;  // Include single characters
+
+        // Odd-length palindromes starting from length 3
+        for (int i = 1, l = 0, r = 2; i < n - 1; i++, l = i-1, r = i+1) {
+            while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
+                count++;
+                l--;
+                r++;
+            }
+        }
+
+        // Even-length palindromes starting from length 2
+        for (int i = 0, l = 0, r = 1; i < n - 1; i++, l = i, r = i+1) {
+            while (l >= 0 && r < n && s.charAt(l) == s.charAt(r)) {
+                count++;
+                l--;
+                r++;
+            }
+        }
+
+        return count;
+    }
+
     public static void main(String[] args) {
         System.out.println(countPalindromesBrute("aaa"));
         System.out.println(countPalindromesBrute("abc"));
@@ -64,5 +91,9 @@ public class PalindromicSubstrings {
         System.out.println(countPalindromes("aaa"));
         System.out.println(countPalindromes("abc"));
         System.out.println(countPalindromes("aabccbaa"));
+
+        System.out.println(countPalindromesExtend("aaa"));
+        System.out.println(countPalindromesExtend("abc"));
+        System.out.println(countPalindromesExtend("aabccbaa"));
     }
 }
