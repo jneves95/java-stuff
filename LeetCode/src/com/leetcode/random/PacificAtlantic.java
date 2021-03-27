@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 /*
  * LeetCode February 27 2021 challenge

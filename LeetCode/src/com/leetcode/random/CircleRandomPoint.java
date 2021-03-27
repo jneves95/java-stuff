@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 /*
  * y^2 = r^2 - x^2

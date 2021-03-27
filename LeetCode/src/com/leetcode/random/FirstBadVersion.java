@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 /*
  * Given a sequence (length n) of versions of a product, where all subsequent versions after a bad version are also bad, returns the first bad version.

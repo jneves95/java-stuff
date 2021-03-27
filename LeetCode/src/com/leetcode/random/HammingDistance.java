@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 /*
  * Given two integers, calculates the number of bits that differ from one another in their bit representation.

@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 /**
  * Given an integer, calculate it's hamming weight (different than zero)

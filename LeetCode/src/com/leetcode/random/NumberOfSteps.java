@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.random;
 
 /**
  * Given a non-negative integer, returns how many steps it takes to be reduced to 0 
