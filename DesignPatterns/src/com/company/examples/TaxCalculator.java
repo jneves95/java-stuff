@@ -1,4 +1,4 @@
-package com.company;
+package com.company.examples;
 
 /*
 Interfaces are contracts that specify the capabilities a class should provide.

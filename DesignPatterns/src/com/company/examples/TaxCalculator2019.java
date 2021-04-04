@@ -1,4 +1,4 @@
-package com.company;
+package com.company.examples;
 
 public class TaxCalculator2019 implements TaxCalculator {
     @Override

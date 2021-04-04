@@ -1,4 +1,4 @@
-package com.company;
+package com.company.examples;
 
 /**
  * Here we implement the common behavior between our elements

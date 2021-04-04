@@ -1,4 +1,4 @@
-package com.company;
+package com.company.examples;
 
 public class TextBox extends UIControl {
 

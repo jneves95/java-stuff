@@ -1,4 +1,4 @@
-package com.company;
+package com.company.examples;
 
 /*
 Say we wanted to create a GUI - we would need elements like TextBox, Button, CheckBox, and these elements should have some common behavior like 'enable', 'focus', 'setPosition', and so on.
